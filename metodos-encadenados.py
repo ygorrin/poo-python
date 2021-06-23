@@ -1,18 +1,18 @@
-class Usuario:# aqui está lo que tenemos hasta ahora
+class Usuario:
     def __init__(self, nombre, email):
         self.nombre = nombre
         self.email = email
         self.account_balance = 0
     # agrega el método deposit
-    def make_deposit(self, cuenta):	# toma un argumento que es el monto del depósito
-        self.account_balance += cuenta	# la cuenta del usuario específico aumenta por la cantidad del valor recibido
+    def make_deposit(self, cuenta):
+        self.account_balance += cuenta
         return self
-    def make_withdrawal (self, cuenta): #haz que este método disminuya el saldo del usuario en la cantidad
+    def make_withdrawal (self, cuenta):
         self.account_balance -= cuenta
         return self
     def display_user_balance (self) : 
         return f"Usuario: {self.nombre}, Saldo:  {self.account_balance}"
-    #def transfer_money (self, other_user, monto):
+
 
 usuario1 = Usuario("Yamy", "yamy@gmail.com")
 usuario2 = Usuario("Yo", "micuenta@gmail.com")

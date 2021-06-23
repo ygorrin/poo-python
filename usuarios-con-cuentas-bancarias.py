@@ -4,8 +4,6 @@ class CuentaBancaria:
         self.tasa = tasa
         self.saldo = saldo
 
-    
-
     def mostrarInformacionCuenta(self):
         print(f"Saldo: $ {self.saldo}")
         return self
@@ -55,3 +53,10 @@ Cuenta Destino: {self.recibe.cuenta.numero}""")
 #SENSEI BONUS: Permite al usuario tener varias cuentas; 
 # actualiza los metodos para que el usuario pueda especificar de 
 # cual cuenta ellos quieren depositar o retirar
+
+
+def registrarLog(self, mensaje):
+        f = open("log_de_depositos.txt","a",encoding="utf8")
+        f.write(mensaje + "\n")
+        f.close()
+        return self
