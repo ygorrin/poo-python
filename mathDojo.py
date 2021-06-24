@@ -26,8 +26,8 @@ import unittest
 
 test1 = MathDojo()
 test2 = MathDojo()
+
 class IsMathDojoTests(unittest.TestCase):
-  
     # cada método en esta clase es una prueba que se ejecutará 
     def testTwo(self):
         self.assertTrue(test1.add(2).add(2,5,1).subtract(3,2).result, 5)
@@ -40,6 +40,8 @@ class IsMathDojoTests(unittest.TestCase):
         #  cualquier tarea que desee ejecutar antes de ejecutar cualquier método anterior, colóquelas en el método setUp 
     def setUp(self):
         print("Inicio de Test MathDojo")
+        test1.result = 0;
+        test2.result = 0;
         # cualquier tarea que quieras ejecutar después de ejecutar las pruebas, ponlas en el método
     def tearDown(self):
         # agrega las tareas tearDown 
